@@ -1,0 +1,406 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lustria&family=Manrope:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Base rule */
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;   /* 1rem = 10px*/
+}
+
+
+body{
+    font-family: "Roboto", sans-serif;
+    color: var(--main-color);
+    font-family: "Poppins", sans-serif;
+}
+
+h1,h2{
+    font-family:"Lustria", serif;
+    font-weight:600;
+    font-style: normal;
+    color: var(--main-color);
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+
+img{
+    width: 100%;
+    /* aspect-ratio: 1;
+    object-fit: cover; */
+}
+
+
+/* layout */
+.container{
+    max-width: 143rem;
+    margin: 0 auto;
+    padding: 1.5rem 2.4rem;
+}
+
+
+/* theme */
+
+:root{
+    --main-color:#0a0a0a;
+    --red-color:#de2022;
+    --author-gray-color: #7f7f7f;
+    --btn-hover-color:#ff3238;
+}   
+
+
+
+/* Modules/reusables */
+
+
+
+.common-category{
+    font-family: "Poppins", sans-serif;
+
+    color: var(--red-color);
+    font-size: 1rem;  
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+.author{
+    color: var(--author-gray-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+/* .btn{
+  padding: 0.8rem 1.9rem;
+  background: var(--red-color); 
+  border: none; 
+  text-transform: capitalize;
+  color: white;
+} */
+
+
+/* states */
+.btn:hover{
+    background: var(--btn-hover-color) !important;
+    /* background-color: #ff3838 !important; */
+}
+
+
+
+
+
+/***** HEADER-section *****/ 
+
+
+
+header .container{
+    display: grid;
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 12px;
+    height: 100vh;
+}
+
+
+
+
+
+/* left sidebar */
+
+.left-sidebar{
+
+    border-right: 1.5px solid #d1caca55;
+    padding-right: 1.2rem;
+
+
+    & .article-card{
+       border-bottom: 1.5px solid #d1caca55;
+       padding-bottom: 1.2rem;
+       margin-bottom: 1.2rem;
+    }
+
+
+    & .article-card-description{
+
+        margin-top: 9px;
+
+        & .card-common-subheading{
+            margin: 0.7rem 0 0.4rem;
+        }
+
+    }
+
+
+}
+
+
+
+/* MIDDLE part */
+
+main .hero-section-bar{
+
+   & .article-card{
+
+
+    & .article-card--img{
+        
+        overflow: hidden;
+        position: relative;
+
+        & img{
+            transform: scale(1.2);
+            /* transform-origin: top; */
+            transform-origin: 40% 20%;
+            /* width: 100%;
+            height: 100%; */
+            object-fit: contain;
+          
+        }
+    }
+
+
+
+    & .article-card-description{
+        margin-top: 0.9rem;
+        text-align: center;
+
+        & .card-main-heading{
+            margin: 0.9rem 0 0.6rem;
+        }
+
+        & .hero-content--description{
+            margin-bottom: 0.4rem;
+            word-spacing: 0.2rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+            
+            
+        }
+    }
+
+    }
+}
+
+
+/* Right Sidebar*/
+
+.right-sidebar{
+
+    border-left: 1.5px solid #d1caca55;
+    padding-left:1.2rem;
+
+    & .right-article--wrapper{
+
+        & .article-card{
+            display: grid;
+        
+            align-items: center;
+            /* grid-template-columns: repeat(2,1fr); */
+            grid-template-columns: 2fr 1fr;
+
+            border-bottom: 1.5px solid #d1caca55;
+            padding-bottom: 1.2rem;
+            margin-bottom: 1.2rem;
+
+
+        }
+
+        & .card-common-subheading{
+            margin: 0.7rem 0 0.4rem;
+        }
+
+        
+    }
+
+}
+
+
+
+    .right-sidebar .newsletter{
+
+        margin-bottom: 3rem;
+
+        & .newletter-heading{
+            font-family:"Lustria", serif ;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+
+        & .newsletter-content{
+            margin: 1.3rem 0 0.8rem;
+
+
+           &  form{
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            & input[type="text"]{
+                padding: 0.9rem;
+                font-size: 1.1rem;
+                border: 1px solid #ccc;
+                outline: none;
+
+                }
+
+            & input[type="submit"]{
+                font-size: 1.1rem;
+                padding: 0.9rem 1.9rem;
+                background: var(--red-color); 
+                text-transform: capitalize;
+                color: white;
+                border: 1px solid #ccc;
+                border-left: none;
+                cursor: pointer;
+            }    
+
+           }
+     
+        }
+
+
+        & .newsletter-policy{
+            word-spacing: 0.1rem;
+            color: #716c6c;
+        }
+
+  
+
+}
+
+
+
+
+
+
+
+/***** RESPONSIVE part *****/ 
+
+
+@media (width<=950px){
+    html{
+        font-size: 56.5%;   
+    }
+    
+}
+
+
+@media (max-width:900px){
+
+    header .container{
+        /* grid-template-columns: repeat(3,1fr); */
+        grid-template-columns: 1fr 2fr;
+        row-gap: 3rem;
+ 
+   
+    }
+
+
+    /* middle part */
+
+    main .hero-section-bar{
+
+        & .article-card-description{
+            text-align: left !important;
+        }
+    }
+
+
+    /* right sidebar */
+    .right-sidebar{
+
+        grid-column:1/-1 ;
+
+        /* margin-top: 3rem; */
+       
+
+        border-left: none;
+        padding-left:0;
+
+        & .right-article--wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+
+            
+        }
+        
+        & .article-card{
+            display: grid;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 1rem;
+        }
+
+        
+  
+
+
+    }
+    
+
+}
+
+
+
+@media(max-width:550px){
+    html{
+        /* font-size: 50.5%;    */
+    }
+
+    header .container{
+    
+        grid-template-columns: 1fr ;
+        row-gap: 3rem;
+    }
+
+    
+    .container .left-sidebar{
+        order: 2;
+    }
+
+
+    /* middle part */
+    .container main{
+        order: 1;
+    }
+
+
+
+
+
+    /* right side bar */
+    .right-sidebar{
+
+        order: 3;
+
+        & .right-article--wrapper{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
